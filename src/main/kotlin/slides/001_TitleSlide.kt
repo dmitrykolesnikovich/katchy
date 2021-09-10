@@ -1,11 +1,7 @@
 package slides
 
-import _internal.RevealJsSlides
-import kotlinx.html.h1
-import kotlinx.html.section
+import katchy.dsl.Presentation
+import katchy.dsl.title
 
-fun RevealJsSlides.titleSlide() {
-    section {
-        h1 { +"Title slide" }
-    }
-}
+fun Presentation.titleSlide() =
+    title("Title Slide")

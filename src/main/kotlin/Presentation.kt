@@ -1,9 +1,8 @@
-import _internal.RevealJsSlides
+import katchy.dsl.presentation
 import slides.introduction
 import slides.titleSlide
 
-fun RevealJsSlides.presentation() {
+val thisPresentation = presentation {
     titleSlide()
     introduction()
 }
-

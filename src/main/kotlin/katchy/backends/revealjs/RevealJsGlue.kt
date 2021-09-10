@@ -1,14 +1,12 @@
-package _internal
+package katchy.backends.revealjs
 
 import kotlinx.browser.document
 import kotlinx.browser.window
-import kotlinx.html.TagConsumer
 import kotlinx.html.dom.append
 import kotlinx.html.h1
-import org.w3c.dom.HTMLElement
 import org.w3c.dom.Node
 import org.w3c.dom.get
-import presentation
+import thisPresentation
 
 fun main() {
     window.onload = {
@@ -22,10 +20,8 @@ fun main() {
             }
         }
         revealNode.append {
-            presentation()
+            thisPresentation.asRevealJsPresentation(this)
         }
         window["Reveal"]["initialize"]()
     }
 }
-
-typealias RevealJsSlides = TagConsumer<HTMLElement>
